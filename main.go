@@ -38,7 +38,7 @@ func findPairHandler(w http.ResponseWriter, r *http.Request) {
 func findPairHandlerTarget(arr []int, target int) [][]int {
 
 	seen := map[int]int{}
-	solution := make([][]int,1 ) 
+	var solution [][]int
 
 	for i, num := range arr {
 		if index,found := seen[target-num]; found && target-num+num != 0 {
